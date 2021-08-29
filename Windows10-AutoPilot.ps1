@@ -1,5 +1,3 @@
-Install-Module OSDProgress
-
 Watch-OSDCloudProvisioning {
     Write-Host -ForegroundColor Cyan "Windows 10 - AutoPilot Zero Touch"
 
@@ -12,13 +10,10 @@ Watch-OSDCloudProvisioning {
     Install-Module OSD -Force
     Import-Module OSD -Force
     Install-Module AutopilotOOBE -Force
-    Update-OSDProgress -Text "Installing Windows 10 - 21H1" # hide first text
+    Update-OSDProgress -Phase -Text "Disk Managment"
+    Update-OSDProgress -Text "Getting disk ready for installation."
 
     Start-OSDCloud -OSBuild 21H1 -OSEdition Education -ZTI
-    #Anything I want  can go right here and I can change it at any time since it is in the Cloud!!!!!
-    Update-OSDProgress -Text "Starting OSDCloud PostAction stuff..."
-    Write-Host  -ForegroundColor Cyan "Starting OSDCloud PostAction stuff..."
-    Start-Sleep -Seconds 5
 
     Update-OSDProgress -Text "Enrolling in AutoPilot MDM"
     Write-Host  -ForegroundColor Cyan "Enrolling in AutoPilot MDM"
@@ -29,4 +24,7 @@ Watch-OSDCloudProvisioning {
     Update-OSDProgress -Text "Reboot in 20 seconds"
     Start-Sleep -Seconds 20
     wpeutil reboot
+    
 }
+Install-Module OSDProgress
+Watch-OSDCloudProvisioning -Window

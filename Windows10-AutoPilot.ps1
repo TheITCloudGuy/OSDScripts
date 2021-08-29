@@ -12,18 +12,17 @@ Watch-OSDCloudProvisioning {
     Install-Module OSD -Force
     Import-Module OSD -Force
     Install-Module AutopilotOOBE -Force
-    Update-OSDProgress -Text " " # hide first text
+    Update-OSDProgress -Text "Installing Windows 10 - 21H1" # hide first text
 
     Start-OSDCloud -OSBuild 21H1 -OSEdition Education -ZTI
     #Anything I want  can go right here and I can change it at any time since it is in the Cloud!!!!!
     Update-OSDProgress -Text "Starting OSDCloud PostAction stuff..."
     Write-Host  -ForegroundColor Cyan "Starting OSDCloud PostAction stuff..."
     Start-Sleep -Seconds 5
-    Update-OSDProgress -Text " Installing Windows 10 - 21H1" # hide first text
 
     Update-OSDProgress -Text "Enrolling in AutoPilot MDM"
     Write-Host  -ForegroundColor Cyan "Enrolling in AutoPilot MDM"
-    Start-AutopilotOOBE
+    
     Update-OSDProgress -Text " " # hide first text
 
     #Restart from WinPE

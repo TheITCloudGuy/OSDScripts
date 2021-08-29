@@ -1,4 +1,5 @@
 Install-Module OSDProgress
+
 Watch-OSDCloudProvisioning {
     Write-Host -ForegroundColor Cyan "Windows 10 - AutoPilot Zero Touch"
 
@@ -24,9 +25,6 @@ Watch-OSDCloudProvisioning {
     Write-Host  -ForegroundColor Cyan "Enrolling in AutoPilot MDM"
     Start-AutopilotOOBE
     Update-OSDProgress -Text " " # hide first text
-    
-    # lets throw an error, just for fun
-    #Update-OSDProgress -DisplayError "Custom error message, pls unlock screen!"
 
     #Restart from WinPE
     Update-OSDProgress -Text "Reboot in 20 seconds"

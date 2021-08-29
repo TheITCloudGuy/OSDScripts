@@ -11,7 +11,7 @@ Watch-OSDCloudProvisioning {
     Update-OSDProgress -Text "Downloading and Installing required Modules"#
     Install-Module OSD -Force
     Import-Module OSD -Force
-    Install-Module AutopilotOOBE
+    Install-Module AutopilotOOBE -Force
     Update-OSDProgress -Text " " # hide first text
 
     Start-OSDCloud -OSBuild 21H1 -OSEdition Education -ZTI

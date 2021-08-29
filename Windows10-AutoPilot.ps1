@@ -19,7 +19,7 @@ Watch-OSDCloudProvisioning {
     Update-OSDProgress -Text "Starting OSDCloud PostAction stuff..."
     Write-Host  -ForegroundColor Cyan "Starting OSDCloud PostAction stuff..."
     Start-Sleep -Seconds 5
-    Update-OSDProgress -Text " " # hide first text
+    Update-OSDProgress -Text " Installing Windows 10 - 21H1" # hide first text
 
     Update-OSDProgress -Text "Enrolling in AutoPilot MDM"
     Write-Host  -ForegroundColor Cyan "Enrolling in AutoPilot MDM"

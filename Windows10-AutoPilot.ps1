@@ -1,3 +1,5 @@
+
+Install-Module OSDProgress
 Watch-OSDCloudProvisioning {
     Write-Host -ForegroundColor Cyan "Windows 10 - AutoPilot Zero Touch"
 
@@ -26,5 +28,3 @@ Watch-OSDCloudProvisioning {
     wpeutil reboot
     
 }
-Install-Module OSDProgress
-Watch-OSDCloudProvisioning -Window
